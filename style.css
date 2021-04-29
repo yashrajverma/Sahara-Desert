@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url("https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header nav .logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+nav ul li{
+    display: inline-block;
+    padding: 10px 15px ;
+    transition: 0.2s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+}
+.text-box{
+    text-align: left    ;
+    position: absolute;
+    max-width: 500px;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%,-25%);
+   
+}
+.text-box h1{
+    font-size: 7em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5%;
+    transition: 0.5s;
+    color: white;
+    cursor: pointer;
+}
+.text-box h1:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    
+}
+.cursor{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transition: 0.1s;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+ul li:hover ~ .cursor {
+    transform: scale(6);
+}
+.text-box p{
+    color: white;
+}
+.text-box button{
+    margin-top: 5%;
+    padding: 10px 40px;
+    color: black;
+    background-color: white;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+}
+.image-box{
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    transform: translate(-10%);
+    border-radius: 20px;
+}
+.image-box .col{
+    width: 250px;
+    height: 325px;
+    padding: 20px ;
+    display: flex;
+    
+}
+.image-box .col img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.4s;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+}
+.col p{
+    color: white;
+    position: absolute;
+    max-width: 200px;
+    margin-top: 10px;
+    left: 10%;
+    transform: translate(-10%);
+}
+.col img:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+    
+}
+@media(max-width:700px){
+    .image-box{
+        
+    }
+}
